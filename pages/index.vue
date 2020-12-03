@@ -1,12 +1,15 @@
 <template>
-  <v-container>
-    <v-row
-      v-for="(homeSection, index) in homeSections"
-      :key="`homeSection-${index}`"
-    >
-      <home-section :section="homeSection" />
-    </v-row>
-  </v-container>
+  <div class="home-header-margin">
+    <home-header />
+    <v-container>
+      <v-row
+        v-for="(homeSection, index) in homeSections"
+        :key="`homeSection-${index}`"
+      >
+        <home-section :section="homeSection" />
+      </v-row>
+    </v-container>
+  </div>
 </template>
 
 <script lang="ts">
@@ -138,3 +141,16 @@ export default Vue.extend({
   }
 });
 </script>
+
+<style lang="scss" scoped>
+@import '~vuetify/src/styles/styles.sass';
+.home-header-margin {
+  margin-top: -56px;
+}
+
+@media #{map-get($display-breakpoints, 'md-and-up')} {
+  .home-header-margin {
+    margin-top: -64px;
+  }
+}
+</style>
