@@ -33,7 +33,7 @@ export default Vue.extend({
 
 <style scoped>
 .skeleton-card {
-  margin: 0.6em;
+  padding: 0.6em;
 }
 
 .skeleton-card >>> .v-skeleton-loader .v-skeleton-loader__heading {
